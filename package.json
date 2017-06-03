@@ -1,6 +1,6 @@
 {
   "name": "pluralize",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Pluralize and singularize any word",
   "main": "pluralize.js",
   "files": [
@@ -32,9 +32,9 @@
     "node": ">=4"
   },
   "devDependencies": {
-    "chai": "^3.2.0",
+    "chai": "^4.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
-    "semistandard": "^9.2.1"
+    "semistandard": "^11.0.0"
   }
 }
