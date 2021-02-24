@@ -180,26 +180,6 @@
   }
 
   /**
-   * Checks if a word is singular
-   *
-   * @param  {string}  word
-   * @return {boolean}
-   */
-  pluralize.isSingular = function (word) {
-    return (irregularSingles.hasOwnProperty(word) || (sanitizeWord(word.toLowerCase(), word, singularRules) === word));
-  };
-
-  /**
-   * Checks if a word is plural
-   *
-   * @param  {string}  word
-   * @return {boolean}
-   */
-  pluralize.isPlural = function (word) {
-    return (irregularPlurals.hasOwnProperty(word) || (sanitizeWord(word.toLowerCase(), word, pluralRules) === word));
-  };
-
-  /**
    * Pluralize a word.
    *
    * @type {Function}
