@@ -731,7 +731,6 @@ describe('pluralize', function () {
       });
     });
 
-<<<<<<< HEAD
     describe('isPlural', function () {
       BASIC_TESTS.concat(PLURAL_TESTS).forEach(function (test) {
         it(test[1] + ' is plural', function () {
@@ -743,11 +742,6 @@ describe('pluralize', function () {
     describe('isSingular', function () {
       BASIC_TESTS.concat(SINGULAR_TESTS).forEach(function (test) {
         it(test[0] + ' is singular', function () {
-=======
-    describe('isSingular', function () {
-      BASIC_TESTS.concat(SINGULAR_TESTS).forEach(function (test) {
-        it('isSingular(' + test[0] + ')', function () {
->>>>>>> cba2fef5aacec60dc1ff4c780d01b16bcb8a03b3
           expect(pluralize.isSingular(test[0])).to.equal(true);
         });
       });
