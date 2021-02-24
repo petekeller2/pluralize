@@ -10,12 +10,13 @@ var pluralize = require('./');
  */
 var BASIC_TESTS = [
   // Uncountables.
+  ['firmware', 'firmware'],
   ['fish', 'fish'],
   ['media', 'media'],
   ['moose', 'moose'],
+  ['police', 'police'],
   ['sheep', 'sheep'],
   ['series', 'series'],
-  ['species', 'species'],
   ['agenda', 'agenda'],
   ['news', 'news'],
   ['reindeer', 'reindeer'],
@@ -29,6 +30,10 @@ var BASIC_TESTS = [
   ['wildlife', 'wildlife'],
   ['Staff', 'Staff'],
   ['STAFF', 'STAFF'],
+  ['turquois', 'turquois'],
+  ['carnivorous', 'carnivorous'],
+  ['only', 'only'],
+  ['aircraft', 'aircraft'],
   // Latin.
   ['veniam', 'veniam'],
   // Pluralization.
@@ -147,7 +152,7 @@ var BASIC_TESTS = [
   ['viscus', 'viscera'],
   ['cactus', 'cacti'],
   ['hippopotamus', 'hippopotamuses'],
-  ['octopus', 'octopi'],
+  ['octopus', 'octopuses'],
   ['platypus', 'platypuses'],
   ['kangaroo', 'kangaroos'],
   ['atlas', 'atlases'],
@@ -319,7 +324,6 @@ var BASIC_TESTS = [
   ['uterus', 'uteri'],
   ['curriculum', 'curricula'],
   ['quorum', 'quora'],
-  ['genie', 'genies'],
   ['genius', 'geniuses'],
   ['flower', 'flowers'],
   ['crash', 'crashes'],
@@ -330,6 +334,8 @@ var BASIC_TESTS = [
   ['sun', 'suns'],
   ['drink', 'drinks'],
   ['diploma', 'diplomas'],
+  ['dilemma', 'dilemmas'],
+  ['grandma', 'grandmas'],
   ['no', 'nos'],
   ['yes', 'yeses'],
   ['employ', 'employs'],
@@ -436,7 +442,8 @@ var BASIC_TESTS = [
   ['honey', 'honeys'],
   ['smiley', 'smilies'],
   ['survey', 'surveys'],
-  ['whiskey', 'whiskies'],
+  ['whiskey', 'whiskeys'],
+  ['whisky', 'whiskies'],
   ['volley', 'volleys'],
   ['tongue', 'tongues'],
   ['suit', 'suits'],
@@ -555,6 +562,9 @@ var BASIC_TESTS = [
   ['progressive', 'progressives'],
   ['laxative', 'laxatives'],
   ['incentive', 'incentives'],
+  ['genesis', 'geneses'],
+  ['surprise', 'surprises'],
+  ['enterprise', 'enterprises'],
   ['relative', 'relatives'],
   ['positive', 'positives'],
   ['perspective', 'perspectives'],
@@ -575,6 +585,74 @@ var BASIC_TESTS = [
   ['radiotelephony', 'radiotelephonies'],
   ['company', 'companies'],
   ['ceremony', 'ceremonies'],
+  ['carnivore', 'carnivores'],
+  ['emphasis', 'emphases'],
+  ['abuse', 'abuses'],
+  ['ass', 'asses'],
+  ['mile', 'miles'],
+  ['consensus', 'consensuses'],
+  ['coatdress', 'coatdresses'],
+  ['courthouse', 'courthouses'],
+  ['playhouse', 'playhouses'],
+  ['crispness', 'crispnesses'],
+  ['racehorse', 'racehorses'],
+  ['greatness', 'greatnesses'],
+  ['demon', 'demons'],
+  ['lemon', 'lemons'],
+  ['pokemon', 'pokemon'],
+  ['pokémon', 'pokémon'],
+  ['christmas', 'christmases'],
+  ['zymase', 'zymases'],
+  ['accomplice', 'accomplices'],
+  ['amice', 'amices'],
+  ['titmouse', 'titmice'],
+  ['slice', 'slices'],
+  ['base', 'bases'],
+  ['database', 'databases'],
+  ['rise', 'rises'],
+  ['uprise', 'uprises'],
+  ['size', 'sizes'],
+  ['prize', 'prizes'],
+  ['booby', 'boobies'],
+  ['hobby', 'hobbies'],
+  ['baby', 'babies'],
+  ['cookie', 'cookies'],
+  ['budgie', 'budgies'],
+  ['calorie', 'calories'],
+  ['brownie', 'brownies'],
+  ['lolly', 'lollies'],
+  ['hippie', 'hippies'],
+  ['smoothie', 'smoothies'],
+  ['techie', 'techies'],
+  ['specie', 'species'],
+  ['quickie', 'quickies'],
+  ['pixie', 'pixies'],
+  ['rotisserie', 'rotisseries'],
+  ['porkpie', 'porkpies'],
+  ['newbie', 'newbies'],
+  ['veggie', 'veggies'],
+  ['bourgeoisie', 'bourgeoisies'],
+  ['party', 'parties'],
+  ['apology', 'apologies'],
+  ['ancestry', 'ancestries'],
+  ['anomaly', 'anomalies'],
+  ['anniversary', 'anniversaries'],
+  ['battery', 'batteries'],
+  ['nappy', 'nappies'],
+  ['hanky', 'hankies'],
+  ['junkie', 'junkies'],
+  ['hogtie', 'hogties'],
+  ['footsie', 'footsies'],
+  ['curry', 'curries'],
+  ['fantasy', 'fantasies'],
+  ['housefly', 'houseflies'],
+  ['falsy', 'falsies'],
+  ['doggy', 'doggies'],
+  ['carny', 'carnies'],
+  ['cabby', 'cabbies'],
+  ['charlie', 'charlies'],
+  ['bookie', 'bookies'],
+  ['auntie', 'aunties'],
   // Prototype inheritance.
   ['constructor', 'constructors'],
   // Non-standard case.
@@ -587,7 +665,11 @@ var BASIC_TESTS = [
   ['한국', '한국'],
   ['中文', '中文'],
   ['اللغة العربية', 'اللغة العربية'],
-  ['四 chicken', '四 chickens']
+  ['四 chicken', '四 chickens'],
+  ['Order2', 'Order2s'],
+  ['Work Order2', 'Work Order2s'],
+  ['SoundFX2', 'SoundFX2s'],
+  ['oDonald', 'oDonalds']
 ];
 
 /**
@@ -611,11 +693,13 @@ var SINGULAR_TESTS = [
  * @type {Array}
  */
 var PLURAL_TESTS = [
-  ['whisky', 'whiskies'],
   ['plateaux', 'plateaux'],
   ['axis', 'axes'],
+  ['basis', 'bases'],
   ['automatum', 'automata'],
-  ['thou', 'you']
+  ['thou', 'you'],
+  ['axiS', 'axes'],
+  ['passerby', 'passersby']
 ];
 
 /**
@@ -631,6 +715,14 @@ describe('pluralize', function () {
       });
     });
 
+    describe('isPlural', function () {
+      BASIC_TESTS.concat(PLURAL_TESTS).forEach(function (test) {
+        it('isPlural(' + test[1] + ')', function () {
+          expect(pluralize.isPlural(test[1])).to.equal(true);
+        });
+      });
+    });
+
     describe('singular', function () {
       BASIC_TESTS.concat(SINGULAR_TESTS).forEach(function (test) {
         it(test[1] + ' -> ' + test[0], function () {
@@ -639,6 +731,7 @@ describe('pluralize', function () {
       });
     });
 
+<<<<<<< HEAD
     describe('isPlural', function () {
       BASIC_TESTS.concat(PLURAL_TESTS).forEach(function (test) {
         it(test[1] + ' is plural', function () {
@@ -650,6 +743,11 @@ describe('pluralize', function () {
     describe('isSingular', function () {
       BASIC_TESTS.concat(SINGULAR_TESTS).forEach(function (test) {
         it(test[0] + ' is singular', function () {
+=======
+    describe('isSingular', function () {
+      BASIC_TESTS.concat(SINGULAR_TESTS).forEach(function (test) {
+        it('isSingular(' + test[0] + ')', function () {
+>>>>>>> cba2fef5aacec60dc1ff4c780d01b16bcb8a03b3
           expect(pluralize.isSingular(test[0])).to.equal(true);
         });
       });
